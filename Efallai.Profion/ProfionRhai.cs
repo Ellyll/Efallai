@@ -36,6 +36,16 @@ namespace Efallai.Profion
             Assert.Equal(nifer, 1);
         }
 
+        public void Gweithio_Gyda_Null()
+        {
+            var efallai = new Rhai<string>(null);
+
+            var eitem = efallai.First();
+
+            Assert.Null(eitem);
+            Assert.True(efallai.HasValue);
+        }
+
         [Fact]
         public void Mae_HasValue_Yn_Gwir()
         {
