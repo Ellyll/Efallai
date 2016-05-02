@@ -59,6 +59,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ProfionDim.cs" />
     <Compile Include="ProfionRhai.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
