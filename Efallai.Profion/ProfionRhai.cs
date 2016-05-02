@@ -5,15 +5,12 @@ namespace Efallai.Profion
 {
     public class ProfionRhai
     {
-        public ProfionRhai()
-        {
-
-        }
+        public ProfionRhai() {}
 
         [Fact]
         public void Gellir_Creu_Gyda_Cynnwys()
         {
-            var efallai = new Rhai<int>(123);
+            Efallai<int> efallai = new Rhai<int>(123);
 
             Assert.NotNull(efallai);
         }
@@ -21,7 +18,7 @@ namespace Efallai.Profion
         [Fact]
         public void Gellir_Dychwelyd_Cynnwys()
         {
-            var efallai = new Rhai<int>(123);
+            Efallai<int> efallai = new Rhai<int>(123);
 
             Assert.Equal(efallai.First(), 123);
         }
@@ -29,7 +26,7 @@ namespace Efallai.Profion
         [Fact]
         public void Dychwelyd_Un_Eitem_Yn_Unig()
         {
-            var efallai = new Rhai<int>(123);
+            Efallai<int> efallai = new Rhai<int>(123);
 
             var nifer = efallai.Count();
 
@@ -38,7 +35,7 @@ namespace Efallai.Profion
 
         public void Gweithio_Gyda_Null()
         {
-            var efallai = new Rhai<string>(null);
+            Efallai<string> efallai = new Rhai<string>(null);
 
             var eitem = efallai.First();
 
@@ -49,7 +46,7 @@ namespace Efallai.Profion
         [Fact]
         public void Mae_HasValue_Yn_Gwir()
         {
-            var efallai = new Rhai<int>(123);
+            Efallai<int> efallai = new Rhai<int>(123);
 
             Assert.True(efallai.HasValue);
         }

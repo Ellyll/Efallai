@@ -5,15 +5,12 @@ namespace Efallai.Profion
 {
     public class ProfionDim
     {
-        public ProfionDim()
-        {
-
-        }
+        public ProfionDim() { }
 
         [Fact]
         public void Gellir_Creu_Heb_Cynnwys()
         {
-            var efallai = new Dim<int>();
+            Efallai<int> efallai = new Dim<int>();
 
             Assert.NotNull(efallai);
         }
@@ -21,17 +18,17 @@ namespace Efallai.Profion
         [Fact]
         public void Dim_yn_Dychwelyd_Cynnwys()
         {
-            var efallai = new Dim<int?>();
+            Efallai<int> efallai = new Dim<int>();
 
-            var canlyniad = efallai.FirstOrDefault();
+            var canlyniad = efallai.ToList();
 
-            Assert.Null(canlyniad);
+            Assert.Empty(canlyniad);
         }
 
         [Fact]
         public void Dychwelyd_Dim_Eitemau()
         {
-            var efallai = new Dim<int>();
+            Efallai<int> efallai = new Dim<int>();
 
             var nifer = efallai.Count();
 
@@ -41,7 +38,7 @@ namespace Efallai.Profion
         [Fact]
         public void Mae_HasValue_Yn_Anwir()
         {
-            var efallai = new Dim<int>();
+            Efallai<int> efallai = new Dim<int>();
 
             Assert.False(efallai.HasValue);
         }
