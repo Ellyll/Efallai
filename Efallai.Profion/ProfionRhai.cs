@@ -13,25 +13,25 @@ namespace Efallai.Profion
         [Fact]
         public void Gellir_Creu_Gyda_Cynnwys()
         {
-            var rhai = new Rhai<int>(123);
+            var efallai = new Rhai<int>(123);
 
-            Assert.NotNull(rhai);
+            Assert.NotNull(efallai);
         }
 
         [Fact]
         public void Gellir_Dychwelyd_Cynnwys()
         {
-            var rhai = new Rhai<int>(123);
+            var efallai = new Rhai<int>(123);
 
-            Assert.Equal(rhai.First(), 123);
+            Assert.Equal(efallai.First(), 123);
         }
 
         [Fact]
         public void Dychwelyd_Un_Eitem_Yn_Unig()
         {
-            var rhai = new Rhai<int>(123);
+            var efallai = new Rhai<int>(123);
 
-            var nifer = rhai.Count();
+            var nifer = efallai.Count();
 
             Assert.Equal(nifer, 1);
         }
@@ -49,9 +49,9 @@ namespace Efallai.Profion
         [Fact]
         public void Mae_HasValue_Yn_Gwir()
         {
-            var rhoi = new Rhai<int>(123);
+            var efallai = new Rhai<int>(123);
 
-            Assert.True(rhoi.HasValue);
+            Assert.True(efallai.HasValue);
         }
     }
 }
